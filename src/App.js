@@ -32,16 +32,16 @@ function App() {
   let userListPrint = [];
 
   function getData() {
-    return Auth.currentCredentials()
-    .then(credentials => {
+//     return Auth.currentCredentials()
+//     .then(credentials => {
       const lambda = new Lambda({
-        credentials: Auth.essentialCredentials(credentials)
+//         credentials: Auth.essentialCredentials(credentials)
       });
       return lambda.invoke({
         FunctionName: 'hello',
         Payload: JSON.stringify({ "hello": "" }),
       });
-    })
+//     })
   }
 
   useEffect(() => {
