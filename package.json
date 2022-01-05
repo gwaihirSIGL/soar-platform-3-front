@@ -1,25 +1,12 @@
 {
-  "name": "soar-platform-2-front",
+  "name": "soar-platform-3-front",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.2.5",
-    "@mui/material": "^5.2.6",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "aws-amplify": "^4.3.11",
-    "aws-sdk": "^2.1050.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "util": "^0.12.4",
-    "web-vitals": "^2.1.2"
+    "dotenv": "*"
   },
   "scripts": {
-    "start": "PORT=80 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
