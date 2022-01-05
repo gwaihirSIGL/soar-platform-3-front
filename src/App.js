@@ -39,7 +39,7 @@ function App() {
       });
       return lambda.invoke({
         FunctionName: 'hello',
-        Payload: JSON.stringify({ "hello": "" }),
+//         Payload: JSON.stringify({ "hello": "" }),
       });
 //     })
   }
