@@ -9,7 +9,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 function patch() {
   const requestOptions = {
-    method: 'POST',
+    method: 'GET',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
       {
@@ -22,7 +22,7 @@ function patch() {
     )
   };
   
-  fetch(`http://${BASE_URL}/user`, requestOptions);
+  fetch(`${BASE_URL}`, requestOptions);
 }
 
 
