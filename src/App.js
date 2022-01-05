@@ -1,5 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
+import Auth from '@aws-amplify/auth';
+import Lambda from 'aws-sdk/clients/lambda'; // npm install aws-sdk
+
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -28,15 +31,23 @@ function App() {
   const [userList, setUserList] = useState([]);
   let userListPrint = [];
 
+  function getData() {
+    return Auth.currentCredentials()
+    .then(credentials => {
+      const lambda = new Lambda({
+        credentials: Auth.essentialCredentials(credentials)
+      });
+      return lambda.invoke({
+        FunctionName: 'hello',
+        Payload: JSON.stringify({ "hello": "" }),
+      });
+    })
+  }
+
   useEffect(() => {
-    fetch(`http://${BASE_URL}/user`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setUserList(result);
-        },
-      )
+    console.log(getData());
+    setIsLoaded(true);
+    setUserList([]);
   }, [])
 
   if (!isLoaded)
