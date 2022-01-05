@@ -1,4 +1,4 @@
-var apiUrl = api_url ? process.env.api_url : "https://p1cqu9pq8a.execute-api.us-west-2.amazonaws.com/minimal"
+var apiUrl = process.env.api_url ? process.env.api_url : "https://p1cqu9pq8a.execute-api.us-west-2.amazonaws.com/minimal"
 
 console.log('U' , apiUrl)
 
