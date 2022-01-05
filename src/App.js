@@ -45,7 +45,7 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(getData());
+    console.log(getData(), "<<==== DATA");
     setIsLoaded(true);
     setUserList([]);
   }, [])
