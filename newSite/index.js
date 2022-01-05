@@ -1,4 +1,4 @@
-var apiUrl = '${api_url}'
+var apiUrl = process.env.api_url
 
 console.log('U' , apiUrl)
 
