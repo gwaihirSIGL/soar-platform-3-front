@@ -1,5 +1,7 @@
 var apiUrl = '${api_url}'
 
+console.log('U' , apiUrl)
+
 var minimalApp = new (function () {
   this.buildTable = function (jsonText) {
     var tableEntries = JSON.parse(jsonText)
